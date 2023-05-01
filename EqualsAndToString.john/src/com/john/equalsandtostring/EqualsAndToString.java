@@ -5,11 +5,13 @@ public class EqualsAndToString {
 	public static void main(String[] args) {
 		
 		Dog myDog = new Dog();
-		myDog.setAge(10);
-		myDog.setName("Fido");
+			myDog.setName("Fido");	
+			myDog.setAge(10);
 		
 		Dog yourDog = new Dog();
-		yourDog.setName("Kiki");
+			yourDog.setName("Fido");
+			yourDog.setAge(10);
+		
 		
 		if (myDog.equals(yourDog)) {
 			System.out.println("They are equal");
@@ -17,14 +19,6 @@ public class EqualsAndToString {
 		else {
 			System.out.println("They are not equal");
 		}
-		
-//		int num1 = 2;
-//		int num2 = 3;
-//		
-//		if(num1 == num2) {
-//			
-//		}
-
 		
 		System.out.println(myDog);
 		

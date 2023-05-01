@@ -1,21 +1,30 @@
 package com.john.equalsandtostring;
 
+import java.util.Objects;
+
 public class Dog {
 
 	private String name;
 	private int age;
-	private int weight;
 	
-	public int getWeight() {
-		return weight;
+	public boolean equals (Object obj) {
+		if (this == obj) { 
+			return true;
+		} 
+		if (obj == null) {
+			return false;
+		}
+		if (this.getClass() != obj.getClass()) {
+			return false;
+		}
+		
+		Dog other = (Dog)obj; //<= type catching
+		
+		return Objects.equals(this.getName(), other.getName())&&
+				Objects.equals (this.getAge(), other.getAge());
+	
 	}
-
-
-	public void setWeight(int weight) {
-		this.weight = weight;
-	}
-
-
+	
 	public String getName() {
 		return name;
 	}
